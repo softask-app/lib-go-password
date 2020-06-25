@@ -1,5 +1,7 @@
 = Golang Password Type
 
+image:https://goreportcard.com/badge/github.com/softask-app/lib-go-password[Go Report Card, link=https://goreportcard.com/report/github.com/softask-app/lib-go-password]
+
 A simple string type that masks its value when printed or encoded.
 
 [source,go]
