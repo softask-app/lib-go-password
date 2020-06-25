@@ -73,7 +73,9 @@ func ExamplePassword_MarshalJSON() {
 }
 
 func ExamplePassword_MarshalXML() {
-	type tmp struct { Pass passwd.Password `xml:"pass"` }
+	type tmp struct {
+		Pass passwd.Password `xml:"pass"`
+	}
 
 	pass := tmp{"XML Time"}
 
@@ -84,7 +86,9 @@ func ExamplePassword_MarshalXML() {
 }
 
 func ExamplePassword_MarshalXMLAttr() {
-	type tmp struct { Pass passwd.Password `xml:"pass,attr"` }
+	type tmp struct {
+		Pass passwd.Password `xml:"pass,attr"`
+	}
 
 	pass := tmp{"What about an attribute?"}
 
@@ -93,4 +97,3 @@ func ExamplePassword_MarshalXMLAttr() {
 	// Output:
 	// <tmp><pass="***"></pass></tmp>
 }
-
