@@ -95,5 +95,5 @@ func ExamplePassword_MarshalXMLAttr() {
 	enc := xml.NewEncoder(os.Stdout)
 	enc.Encode(pass)
 	// Output:
-	// <tmp><pass="***"></pass></tmp>
+	// <tmp pass="***"></tmp>
 }
