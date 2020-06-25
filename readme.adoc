@@ -10,6 +10,11 @@ A simple string type that masks its value when printed or encoded.
 ----
 func main() {
 	foo := passwd.Password("Hello World")
-	fmt.Println(foo) // prints: ***
+	fmt.Println(foo)
+	// Output: ***
+
+	enc := json.NewEncoder(os.Stdout)
+	enc.Encode(foo)
+	// Output: "***"
 }
 ----
