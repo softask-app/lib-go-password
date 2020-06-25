@@ -26,8 +26,14 @@ jobs:
       run: |
         go get -v -t -d ./...
 
+    - name: Build
+      run: go build -v ./...
+
     - name: Test
       run: go test -v go test -race -coverprofile=coverage.txt -covermode=atomic ./...
 
     - name: Codecov
       uses: codecov/codecov-action@v1.0.7
+      with:
+        file: coverage.txt
+        fail_ci_if_error: true
