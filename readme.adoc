@@ -1,0 +1,11 @@
+= Golang Password Type
+
+A simple string type that masks its value when printed or encoded.
+
+[source,go]
+----
+func main() {
+	foo := passwd.Password("Hello World")
+	fmt.Println(foo) // prints: ***
+}
+----
